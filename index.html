@@ -12,7 +12,12 @@
     <script>
         var btn = document.querySelector('#btn');
         btn.addEventListener('click', function(){
-            alert("Klk");
+            navigator.usb.getDevices().then(devices => {
+            devices.map(device => {
+                console.log(device.productName);      // "Arduino Micro"
+                console.log(device.manufacturerName); // "Arduino LLC"
+            });
+            })
         });
     </script>
 </body>

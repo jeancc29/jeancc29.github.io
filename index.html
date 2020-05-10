@@ -11,15 +11,15 @@
     <button id="btnSaludar">Saludos</button>
 
     <script>
-        var btn = document.querySelector('#btn');
-        btn.addEventListener('click', function(){
-            navigator.usb.requestDevice({ filters: [] })
-            .then(device => {
-            console.log(device.productName);      // "Arduino Micro"
-            console.log(device.manufacturerName); // "Arduino LLC"
-            })
-            .catch(error => { console.log(error); });
-        });
+        // var btn = document.querySelector('#btn');
+        // btn.addEventListener('click', function(){
+        //     navigator.usb.requestDevice({ filters: [] })
+        //     .then(device => {
+        //     console.log(device.productName);      // "Arduino Micro"
+        //     console.log(device.manufacturerName); // "Arduino LLC"
+        //     })
+        //     .catch(error => { console.log(error); });
+        // });
 
         var btnSaludar = document.querySelector("#btnSaludar");
         btnSaludar.addEventListener('click', function(){

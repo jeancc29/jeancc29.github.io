@@ -44636,7 +44636,7 @@ case 2:q.e8("barbarian recordarme prueba: "+p.a(o.a2(b.a,"recordarme"))+" ")
 return P.X(null,s)}})
 return P.Y($async$mF,s)},
 K:function(a){var t,s=null,r=F.bH(a,!1).a,q=F.bH(a,!1).a
-r=M.ed(s,s,s,s,S.vy(s,s,s,s,s,new X.wf(new L.kG("images/login.jpg"),C.o_),C.ab),q.b,s,s,r.a)
+r=M.ed(s,s,s,s,S.vy(s,s,s,s,s,new X.wf(new L.kG("assets/images/login.jpg"),C.o_),C.ab),q.b,s,s,r.a)
 q=F.bH(a,!1).a
 t=F.bH(a,!1).a
 return new M.qy(Q.a08(!0,new T.iZ(C.R,s,s,T.qU(C.ca,H.b([r,M.ed(s,s,s,s,S.vy(s,s,s,C.j,T.Xv(C.vq,H.b([P.aH(0,0,0,0),C.o],u.bk),C.vp,H.b([0,1],u.n),C.k8),s,C.ab),q.b,s,s,t.a),new T.eQ(C.R,s,s,new A.pg(new D.T1(this),s),s)],u.G),C.f8),s),!0),this.f)}}

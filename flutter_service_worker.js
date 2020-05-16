@@ -1,16 +1,10 @@
 'use strict';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "42b4deeda360f46739ef7a9fa9c079d1",
-"assets/assets/images/cat.jpg": "a5054e7ec1cefc57f7955fb3524ea7f5",
-"assets/assets/images/ic_launcher.png": "3092c2d9273916fa03590776674f9a05",
-"assets/assets/images/ic_loterias.png": "7a71736e0854622060fe5b0d0fb461d7",
+  "assets/AssetManifest.json": "7079ddaff2e4e6867d7be7361247bffa",
+"assets/assets/bingo-netwroks.png": "3d2fbadcae9aff7e6d77ef350c4389b1",
 "assets/assets/images/login.jpg": "59fc83e26c663ade5dcae6e7d56ca970",
-"assets/assets/images/loterias_dominicanas.png": "31615f761ccd1698aad7bfb5ba938633",
-"assets/assets/images/loterias_dominicanas_sin_letras.png": "7adab70973b93df249267c261c2c53cf",
-"assets/assets/images/loterias_dominicanas_sin_letras_editada.png": "5c2942d32007e705385a39356e9ef72e",
-"assets/assets/images/Pictures%2520-%2520Shortcut.lnk": "be8acb750e6604eaab397e6a799bfd74",
-"assets/assets/images/plate1.png": "3d0a5ebe07467e186a103b5879022c40",
+"assets/assets/login.jpg": "59fc83e26c663ade5dcae6e7d56ca970",
 "assets/FontManifest.json": "18eda8e36dfa64f14878d07846d6e17f",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
 "assets/LICENSE": "58f573f01243b27c6d86e254677b2aba",
@@ -23,7 +17,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "42c214fbdd6cac4f2ccf724dc2a12140",
 "/": "42c214fbdd6cac4f2ccf724dc2a12140",
-"main.dart.js": "aa66e9e812fbfa7cffe6f349388c84ce",
+"main.dart.js": "c9cc4c876f6b35d38b7327c052e22c17",
 "manifest.json": "624456151c0a0b311be49ff12acbd747"
 };
 

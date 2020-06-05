@@ -18,6 +18,7 @@
             console.log(device.productName);      // "Arduino Micro"
             console.log(device.manufacturerName); // "Arduino LLC"
             console.log(device.vendorId); // "Arduino LLC"
+            console.log(device.productId); // "Arduino LLC"
             device.open()
                 .then(() => device.selectConfiguration(1))
                 .then(() => device.claimInterface(0));

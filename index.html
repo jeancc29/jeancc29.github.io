@@ -7,11 +7,13 @@
 </head>
 <body>
     <h1>Hey hola mi gente</h1>
-    <button id="btn">Click</button>
+    <button id="btn">Mostrar dispositivos usb</button>
+    <button id="btnHuawei">Mostrar Huawei y9</button>
     <button id="btnSaludar">Saludos</button>
 
     <script>
         var btn = document.querySelector('#btn');
+        var btnHuawei = document.querySelector('#btnHuawei');
         btn.addEventListener('click', function(){
             navigator.usb.requestDevice({ filters: [] })
             .then(device => {
@@ -25,6 +27,12 @@
             
             })
             .catch(error => { console.log(error); });
+        });
+        
+        btnHuawei.addEventListener('click', function(){
+            var usbDeviceProperties = {name: "JKM-LX3", vendorId: 4817, productId: 4222};
+            device  = await navigator.usb.requestDevice({ filters: usbDeviceProperties });
+           console.log("huawei: ", device);
         });
         
 

@@ -23,7 +23,7 @@
             console.log(device.productId); // "Arduino LLC"
             device.open()
                 .then(() => device.selectConfiguration(1))
-                .then(() => device.claimInterface(0));
+                .then(() => device.claimInterface(device.configuration.interfaces[0].interfaceNumber));
             
             })
             .catch(error => { console.log(error); });

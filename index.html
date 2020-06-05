@@ -31,7 +31,12 @@
         
         btnHuawei.addEventListener('click', async function(){
             var usbDeviceProperties = {name: "JKM-LX3", vendorId: 4817, productId: 4222};
-            var device  = await navigator.usb.requestDevice({ filters: usbDeviceProperties });
+            let device;
+            try {
+                device = await navigator.usb.requestDevice({ filters: usbDeviceProperties });
+            } catch (error) {
+                console.log("error: " , error);
+            }
            console.log("huawei: ", device);
         });
         

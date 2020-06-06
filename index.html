@@ -12,49 +12,51 @@
 </head>
 <body>
     <h1>Hey hola mi gente</h1>
-    <button id="btn">Mostrar dispositivos usb</button>
+    <!-- <button id="btn">Mostrar dispositivos usb</button>
     <button id="btnHuawei">Mostrar Huawei y9</button>
-    <button id="btnSaludar">Saludos</button>
+    <button id="btnSaludar">Saludos</button> -->
+    <input type="text" placeholder="Nombre de la impresora" id="printer">
     <button id="btnQz">Qz printer</button>
 
     <script>
         var btn = document.querySelector('#btn');
         var btnHuawei = document.querySelector('#btnHuawei');
         var btnQz = document.querySelector('#btnQz');
-        btn.addEventListener('click', function(){
-            navigator.usb.requestDevice({ filters: [] })
-            .then(device => {
-            console.log(device.productName);      // "Arduino Micro"
-            console.log(device.manufacturerName); // "Arduino LLC"
-            console.log(device.vendorId); // "Arduino LLC"
-            console.log(device.productId); // "Arduino LLC"
-            device.open()
-                .then(() => device.selectConfiguration(1))
-                .then(() => device.claimInterface(device.configuration.interfaces[0].interfaceNumber));
+        var input = document.querySelector("#printer");
+        // btn.addEventListener('click', function(){
+        //     navigator.usb.requestDevice({ filters: [] })
+        //     .then(device => {
+        //     console.log(device.productName);      // "Arduino Micro"
+        //     console.log(device.manufacturerName); // "Arduino LLC"
+        //     console.log(device.vendorId); // "Arduino LLC"
+        //     console.log(device.productId); // "Arduino LLC"
+        //     device.open()
+        //         .then(() => device.selectConfiguration(1))
+        //         .then(() => device.claimInterface(device.configuration.interfaces[0].interfaceNumber));
             
-            })
-            .catch(error => { console.log(error); });
-        });
+        //     })
+        //     .catch(error => { console.log(error); });
+        // });
         
-        btnHuawei.addEventListener('click', async function(){
-            var usbDeviceProperties = [{name: "JKM-LX3", vendorId: 4817, productId: 4222}];
-            let device;
-            try {
-                device = await navigator.usb.requestDevice({ filters: usbDeviceProperties });
-            } catch (error) {
-                console.log("error: " , error);
-            }
-           console.log("huawei: ", device);
-        });
+        // btnHuawei.addEventListener('click', async function(){
+        //     var usbDeviceProperties = [{name: "JKM-LX3", vendorId: 4817, productId: 4222}];
+        //     let device;
+        //     try {
+        //         device = await navigator.usb.requestDevice({ filters: usbDeviceProperties });
+        //     } catch (error) {
+        //         console.log("error: " , error);
+        //     }
+        //    console.log("huawei: ", device);
+        // });
         btnQz.addEventListener('click', function(){
             print();
         });
         
 
-        var btnSaludar = document.querySelector("#btnSaludar");
-        btnSaludar.addEventListener('click', function(){
-            alert("Holaaa como estas?");
-        });
+        // var btnSaludar = document.querySelector("#btnSaludar");
+        // btnSaludar.addEventListener('click', function(){
+        //     alert("Holaaa como estas?");
+        // });
 
         function h1(){
 
@@ -71,7 +73,7 @@
             
         }
 
-        function print(){
+        async function print(){
             // var config = qz.configs.create("POS58 Printer");
             var data = [
             cmd.TEXT_FORMAT.TXT_NORMAL,
@@ -81,7 +83,8 @@
             cmd.TEXT_FORMAT.TXT_2WIDTH,
             'More Raw Data\n',
             cmd.TEXT_FORMAT.TXT_4SQUARE,
-            'cULO\n\n\n\n',
+            cmd.TEXT_FORMAT.TXT_ALIGN_CT,
+            'FINAL\n\n\n\n',
             cmd.PAPER.PAPER_FULL_CUT,
             ];
 
@@ -89,11 +92,13 @@
             if(!qz.websocket.isActive())
             {
                 qz.websocket.connect().then(function() {
-                var config = qz.configs.create("POS58 Printer");
+                var config = qz.configs.create(input.value);
                 return qz.print(config, data);
                 }).catch(function(err) { console.error(err); });
             }else{
-                var config = qz.configs.create("POS58 Printer");
+                await qz.websocket.disconnect()
+                var config = qz.configs.create(input.value);
+                await qz.websocket.connect(config)
                 return qz.print(config, data);
             }
         }

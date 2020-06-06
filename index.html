@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Required scripts -->
+<script type="text/javascript" src="js/dependencies/rsvp-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/dependencies/sha-256.min.js"></script>
+<script type="text/javascript" src="js/qz-tray.js"></script>
+<script type="text/javascript" src="cmd.js"></script>
 </head>
 <body>
     <h1>Hey hola mi gente</h1>
     <button id="btn">Mostrar dispositivos usb</button>
     <button id="btnHuawei">Mostrar Huawei y9</button>
     <button id="btnSaludar">Saludos</button>
+    <button id="btnQz">Qz printer</button>
 
     <script>
         var btn = document.querySelector('#btn');
         var btnHuawei = document.querySelector('#btnHuawei');
+        var btnQz = document.querySelector('#btnQz');
         btn.addEventListener('click', function(){
             navigator.usb.requestDevice({ filters: [] })
             .then(device => {
@@ -39,6 +46,9 @@
             }
            console.log("huawei: ", device);
         });
+        btnQz.addEventListener('click', function(){
+            print();
+        });
         
 
         var btnSaludar = document.querySelector("#btnSaludar");
@@ -60,6 +70,51 @@
             console.log("hola");
             
         }
+
+        function print(){
+            // var config = qz.configs.create("POS58 Printer");
+            var data = [
+            cmd.TEXT_FORMAT.TXT_NORMAL,
+            'Raw Data\n',
+            cmd.TEXT_FORMAT.TXT_2HEIGHT,
+            'More Raw Data\n',
+            cmd.TEXT_FORMAT.TXT_2WIDTH,
+            'More Raw Data\n',
+            cmd.TEXT_FORMAT.TXT_4SQUARE,
+            'cULO\n\n\n\n',
+            cmd.PAPER.PAPER_FULL_CUT,
+            ];
+
+            // qz.print(config, data).catch(function(e) { console.error(e); });
+            if(!qz.websocket.isActive())
+            {
+                qz.websocket.connect().then(function() {
+                var config = qz.configs.create("POS58 Printer");
+                return qz.print(config, data);
+                }).catch(function(err) { console.error(err); });
+            }else{
+                var config = qz.configs.create("POS58 Printer");
+                return qz.print(config, data);
+            }
+        }
+
+        function startConnection(config) {
+        if (!qz.websocket.isActive()) {
+            qz.websocket.connect(config).then(function() {
+            }).catch(function(err) { console.error(err); });
+        } else {
+            // displayMessage('An active connection with QZ already exists.', 'alert-warning');
+        }
+    }
+
+    function endConnection() {
+        if (qz.websocket.isActive()) {
+            qz.websocket.disconnect().then(function() {
+            }).catch(function(err) { console.error(err); });
+        } else {
+            // displayMessage('No active connection with QZ exists.', 'alert-warning');
+        }
+    }
 
     </script>
 </body>

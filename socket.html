@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Enviar mensaje</button>
+    
+
+    <script>
+        var btn = document.querySelector("#btn");
+        
+        // Crea una nueva conexión.
+        const socket = new WebSocket('ws://localhost:8889');
+
+        // Abre la conexión
+        socket.addEventListener('open', function (event) {
+            console.log("Conectado");
+            
+            socket.send('Hello Server!');
+        });
+
+        // Escucha por mensajes
+        socket.addEventListener('message', function (event) {
+            console.log('Message from server', event.data);
+        });
+
+        btn.addEventListener("click", function(){
+            // socket.send(String());
+            var data = [];
+            data.push("{'text' : 'Hello Server bajo a culo!', 'lineSpace' : 2, 'cmd' : 'h1'}");
+            data.push("{'text' : 'Hola soy Estefania!', 'lineSpace' : 2, 'cmd' : 'h1'}");
+            data.push("{'text' : 'La mujer de jean!', 'lineSpace' : 2, 'cmd' : 'h1'}");
+            socket.send(data);
+        })
+    </script>
+</body>
+</html>

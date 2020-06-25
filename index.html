@@ -4,123 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Required scripts -->
-<script type="text/javascript" src="js/dependencies/rsvp-3.1.0.min.js"></script>
-<script type="text/javascript" src="js/dependencies/sha-256.min.js"></script>
-<script type="text/javascript" src="js/qz-tray.js"></script>
-<script type="text/javascript" src="cmd.js"></script>
 </head>
 <body>
-    <h1>Hey hola mi gente</h1>
-    <!-- <button id="btn">Mostrar dispositivos usb</button>
-    <button id="btnHuawei">Mostrar Huawei y9</button>
-    <button id="btnSaludar">Saludos</button> -->
-    <input type="text" placeholder="Nombre de la impresora" id="printer">
-    <button id="btnQz">Qz printer</button>
+    <button id="btn">Enviar mensaje</button>
+    
 
     <script>
-        var btn = document.querySelector('#btn');
-        var btnHuawei = document.querySelector('#btnHuawei');
-        var btnQz = document.querySelector('#btnQz');
-        var input = document.querySelector("#printer");
-        // btn.addEventListener('click', function(){
-        //     navigator.usb.requestDevice({ filters: [] })
-        //     .then(device => {
-        //     console.log(device.productName);      // "Arduino Micro"
-        //     console.log(device.manufacturerName); // "Arduino LLC"
-        //     console.log(device.vendorId); // "Arduino LLC"
-        //     console.log(device.productId); // "Arduino LLC"
-        //     device.open()
-        //         .then(() => device.selectConfiguration(1))
-        //         .then(() => device.claimInterface(device.configuration.interfaces[0].interfaceNumber));
-            
-        //     })
-        //     .catch(error => { console.log(error); });
-        // });
+        var btn = document.querySelector("#btn");
         
-        // btnHuawei.addEventListener('click', async function(){
-        //     var usbDeviceProperties = [{name: "JKM-LX3", vendorId: 4817, productId: 4222}];
-        //     let device;
-        //     try {
-        //         device = await navigator.usb.requestDevice({ filters: usbDeviceProperties });
-        //     } catch (error) {
-        //         console.log("error: " , error);
-        //     }
-        //    console.log("huawei: ", device);
-        // });
-        btnQz.addEventListener('click', function(){
-            print();
+        // Crea una nueva conexión.
+        const socket = new WebSocket('ws://localhost:8889');
+
+        // Abre la conexión
+        socket.addEventListener('open', function (event) {
+            console.log("Conectado");
+            
+            socket.send('Hello Server!');
         });
-        
 
-        // var btnSaludar = document.querySelector("#btnSaludar");
-        // btnSaludar.addEventListener('click', function(){
-        //     alert("Holaaa como estas?");
-        // });
+        // Escucha por mensajes
+        socket.addEventListener('message', function (event) {
+            console.log('Message from server', event.data);
+        });
 
-        function h1(){
-
-        }
-
-        function h2(){
-
-        }
-
-        function h3(){
-        }
-        function klk(){
-            console.log("hola");
-            
-        }
-
-        async function print(){
-            // var config = qz.configs.create("POS58 Printer");
-            var data = [
-            cmd.TEXT_FORMAT.TXT_NORMAL,
-            'Raw Data\n',
-            cmd.TEXT_FORMAT.TXT_2HEIGHT,
-            'More Raw Data\n',
-            cmd.TEXT_FORMAT.TXT_2WIDTH,
-            'More Raw Data\n',
-            cmd.TEXT_FORMAT.TXT_4SQUARE,
-            cmd.TEXT_FORMAT.TXT_ALIGN_CT,
-            'FINAL\n\n\n\n',
-            cmd.PAPER.PAPER_FULL_CUT,
-            ];
-
-            // qz.print(config, data).catch(function(e) { console.error(e); });
-            if(!qz.websocket.isActive())
-            {
-                qz.websocket.connect().then(function() {
-                var config = qz.configs.create(input.value);
-                return qz.print(config, data);
-                }).catch(function(err) { console.error(err); });
-            }else{
-                await qz.websocket.disconnect()
-                var config = qz.configs.create(input.value);
-                await qz.websocket.connect(config)
-                return qz.print(config, data);
-            }
-        }
-
-        function startConnection(config) {
-        if (!qz.websocket.isActive()) {
-            qz.websocket.connect(config).then(function() {
-            }).catch(function(err) { console.error(err); });
-        } else {
-            // displayMessage('An active connection with QZ already exists.', 'alert-warning');
-        }
-    }
-
-    function endConnection() {
-        if (qz.websocket.isActive()) {
-            qz.websocket.disconnect().then(function() {
-            }).catch(function(err) { console.error(err); });
-        } else {
-            // displayMessage('No active connection with QZ exists.', 'alert-warning');
-        }
-    }
-
+        btn.addEventListener("click", function(){
+            // socket.send(String());
+            var data = [];
+            data.push("{'text' : 'Hello Server bajo a culo!', 'lineSpace' : 2, 'cmd' : 'h1'}");
+            data.push("{'text' : 'Hola soy Estefania!', 'lineSpace' : 2, 'cmd' : 'h1'}");
+            data.push("{'text' : 'La mujer de jean!', 'lineSpace' : 2, 'cmd' : 'h1'}");
+            socket.send(data);
+        })
     </script>
 </body>
 </html>

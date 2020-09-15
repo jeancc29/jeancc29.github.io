@@ -10154,7 +10154,7 @@ this.c=null},
 vK:function(a){var s=0,r=P.Y(t.U),q,p,o,n,m,l,k
 var $async$vK=P.U(function(b,c){if(b===1)return P.V(c,r)
 while(true)switch(s){case 0:s=3
-return P.P(G.ab8("http://127.0.0.1:8000/api/routes",C.ct),$async$vK)
+return P.P(G.ab8("https://pruebass.ml/api/routes",C.ct),$async$vK)
 case 3:l=c
 k=l.b
 s=k<200||k>400?4:5
@@ -10187,7 +10187,7 @@ while(true)switch(s){case 0:m=new H.cp(t.Gf)
 l=t.X
 m.l(0,"data",P.aj(["id",b.a,"descripcion",b.b],l,t._))
 s=3
-return P.P(G.No("http://127.0.0.1:8000/api/routes/store",C.aJ.ec(m),C.ct),$async$vL)
+return P.P(G.No("https://pruebass.ml/api/routes/store",C.aJ.ec(m),C.ct),$async$vL)
 case 3:p=d
 o=p.b
 s=o<200||o>400?4:5
@@ -10218,7 +10218,7 @@ while(true)switch(s){case 0:m=new H.cp(t.Gf)
 l=t.X
 m.l(0,"data",P.aj(["id",b.a,"descripcion",b.b],l,t._))
 s=3
-return P.P(G.No("http://127.0.0.1:8000/api/routes/delete",C.aJ.ec(m),C.ct),$async$vJ)
+return P.P(G.No("https://pruebass.ml/api/routes/delete",C.aJ.ec(m),C.ct),$async$vJ)
 case 3:p=d
 o=p.b
 s=o<200||o>400?4:5
@@ -11376,7 +11376,7 @@ _.d=d},
 nI:function(a){var s=0,r=P.Y(t.U),q,p,o,n,m,l,k
 var $async$nI=P.U(function(b,c){if(b===1)return P.V(c,r)
 while(true)switch(s){case 0:s=3
-return P.P(G.ab8("http://127.0.0.1:8000/api/customers",C.ct),$async$nI)
+return P.P(G.ab8("https://pruebass.ml/api/customers",C.ct),$async$nI)
 case 3:l=c
 k=l.b
 s=k<200||k>400?4:5
@@ -11408,7 +11408,7 @@ var $async$rH=P.U(function(c,d){if(c===1)return P.V(d,r)
 while(true)switch(s){case 0:l=new H.cp(t.Gf)
 l.l(0,"data",a.bS())
 s=3
-return P.P(G.No("http://127.0.0.1:8000/api/customers/store",C.aJ.ec(l),C.ct),$async$rH)
+return P.P(G.No("https://pruebass.ml/api/customers/store",C.aJ.ec(l),C.ct),$async$rH)
 case 3:p=d
 o=p.b
 s=o<200||o>400?4:5
@@ -12422,7 +12422,7 @@ a8s:function a8s(){},
 nV:function(a){var s=0,r=P.Y(t.U),q,p,o,n,m,l,k
 var $async$nV=P.U(function(b,c){if(b===1)return P.V(c,r)
 while(true)switch(s){case 0:s=3
-return P.P(G.ab8("http://127.0.0.1:8000/api/expenses",C.ct),$async$nV)
+return P.P(G.ab8("https://pruebass.ml/api/expenses",C.ct),$async$nV)
 case 3:l=c
 k=l.b
 s=k<200||k>400?4:5
@@ -12454,7 +12454,7 @@ var $async$t9=P.U(function(c,d){if(c===1)return P.V(d,r)
 while(true)switch(s){case 0:l=new H.cp(t.Gf)
 l.l(0,"data",b.bS())
 s=3
-return P.P(G.No("http://127.0.0.1:8000/api/expenses/store",C.aJ.ec(l),C.ct),$async$t9)
+return P.P(G.No("https://pruebass.ml/api/expenses/store",C.aJ.ec(l),C.ct),$async$t9)
 case 3:p=d
 o=p.b
 s=o<200||o>400?4:5
@@ -12484,7 +12484,7 @@ var $async$t8=P.U(function(c,d){if(c===1)return P.V(d,r)
 while(true)switch(s){case 0:l=new H.cp(t.Gf)
 l.l(0,"data",b.bS())
 s=3
-return P.P(G.No("http://127.0.0.1:8000/api/expenses/delete",C.aJ.ec(l),C.ct),$async$t8)
+return P.P(G.No("https://pruebass.ml/api/expenses/delete",C.aJ.ec(l),C.ct),$async$t8)
 case 3:p=d
 o=p.b
 s=o<200||o>400?4:5

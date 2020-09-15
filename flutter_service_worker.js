@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "7ad066a65a063bbf76b7f3eaf9c1b5cf",
+  "assets/AssetManifest.json": "63bf6a5756d4074532b73713aa92c187",
 "assets/FontManifest.json": "623c6813055bd5d214d7f64b24ae3472",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
 "assets/fonts/OpenSans-Bold.ttf": "1025a6e0fb0fa86f17f57cc82a6b9756",
@@ -27,6 +27,14 @@ const RESOURCES = {
 "assets/fonts/Roboto-Regular.ttf": "11eabca2251325cfc5589c9c6fb57b46",
 "assets/fonts/Roboto-Thin.ttf": "321de678e592d0b8f44f1a82d7ca4b62",
 "assets/fonts/Roboto-ThinItalic.ttf": "35a9c89aff1396595ad345e378a32aca",
+"assets/images/logo.png": "fc139cdbe6deb1b8ca2a16641043e3e9",
+"assets/images/logo_icono_aqua.png": "5e312b8c0268f37217315d03ca1548b4",
+"assets/images/logo_icono_azul.png": "baab99d7e141f44f33c86af486f75288",
+"assets/images/logo_icono_morado.png": "025b13b2e188d81761c2e952c63de369",
+"assets/images/logo_icono_naranja.png": "931f26d5084c69500f94ccd81ba0dfb8",
+"assets/images/logo_icono_rojo.png": "62e10c1cadbfde973f655c412767d7dd",
+"assets/images/logo_icono_rosado.png": "cf163aa8631d5fc2f10bae4c2485aafc",
+"assets/images/logo_icono_verde.png": "3e592fad815bdf2421181bf418ab5a2a",
 "assets/images/p1.jpeg": "a12a6a8ded0c41eab514ce60a6f92fa9",
 "assets/images/p1_sin_fondo.png": "c2dfc16238c50fce5e0926a4b6e02c30",
 "assets/images/p2.jpeg": "57cc6bc6cd1d600e27332baecccaabd8",
@@ -38,7 +46,7 @@ const RESOURCES = {
 "assets/images/p6.jpeg": "bb209549eacc2304cce431e1a35dd400",
 "assets/images/p7.jpeg": "faa1186f8264d78acab6f90220935cb7",
 "assets/images/user.png": "1300018473cc0038187aaa0e2604fa27",
-"assets/NOTICES": "508e136d7308b336efcfb4b96b651cfe",
+"assets/NOTICES": "8f8241bcb06e3c444103cfc616f657f8",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "5a37ae808cf9f652198acde612b5328d",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "2bca5ec802e40d3f4b60343e346cedde",
@@ -48,7 +56,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "84a519cb865a13385b0a4afc03f7a234",
 "/": "84a519cb865a13385b0a4afc03f7a234",
-"main.dart.js": "93d27f884bae8b88b97dac4799b2c22f",
+"main.dart.js": "37a493f50cc260339a1a191abd70b982",
 "manifest.json": "5dbaea48922ffe61c3abf6843474db1c"
 };
 

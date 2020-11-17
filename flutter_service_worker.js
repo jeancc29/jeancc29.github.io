@@ -3,8 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "bb5338e7c9c9e8a96160e5b61cf31066",
-"assets/FontManifest.json": "b17f5a0de7e5b18acb5cabefbc06df6a",
+  "assets/AssetManifest.json": "6477aac742f5c3096bdb0b8cef88fc10",
+"assets/FontManifest.json": "d8d2d0ef8251dc82cc4fd8e499b2680b",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/fonts/OpenSans-Bold.ttf": "1025a6e0fb0fa86f17f57cc82a6b9756",
 "assets/fonts/OpenSans-BoldItalic.ttf": "3a8113737b373d5bccd6f71d91408d16",
@@ -16,6 +16,18 @@ const RESOURCES = {
 "assets/fonts/OpenSans-Regular.ttf": "3ed9575dcc488c3e3a5bd66620bdf5a4",
 "assets/fonts/OpenSans-SemiBold.ttf": "ba5cde21eeea0d57ab7efefc99596cce",
 "assets/fonts/OpenSans-SemiBoldItalic.ttf": "4f04fe541ca8be9b60b500e911b75fb5",
+"assets/fonts/ProductSans-Black.ttf": "909eeb19f58cc8c0bc45422f2745cc8a",
+"assets/fonts/ProductSans-BlackItalic.ttf": "d165693949a2366b8baef8ec592417dd",
+"assets/fonts/ProductSans-Bold.ttf": "a19a7b108b2e3961fc855c6ea5a6546f",
+"assets/fonts/ProductSans-BoldItalic.ttf": "281acf49bbcece01beff18a4a59f9bfd",
+"assets/fonts/ProductSans-Italic.ttf": "af05b47de35fd5a5960ad1e440a4c0c7",
+"assets/fonts/ProductSans-Light.ttf": "5ea2ab343da06f7eb96ea959895665ea",
+"assets/fonts/ProductSans-LightItalic.ttf": "a7b47650ea4bfb29cc284c9d383a4db1",
+"assets/fonts/ProductSans-Medium.ttf": "9c51beb79b8ab173abd924ce39178f0b",
+"assets/fonts/ProductSans-MediumItalic.ttf": "b7efc2304b5103df6a75befa88d42d40",
+"assets/fonts/ProductSans-Regular.ttf": "b61c0ab33a818a0162f3e868babcef4b",
+"assets/fonts/ProductSans-Thin.ttf": "3c36b2574c62d41428b496b7512e952d",
+"assets/fonts/ProductSans-ThinItalic.ttf": "4b3b9e82158bd2a00b97eba4dd8d6cfa",
 "assets/fonts/Roboto-Black.ttf": "5ebb24ee1112dd9562629375c387879a",
 "assets/fonts/Roboto-BlackItalic.ttf": "99682a78fa4fe61e1177b94757336bbf",
 "assets/fonts/Roboto-Bold.ttf": "e07df86cef2e721115583d61d1fb68a6",
@@ -55,9 +67,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "6b7b43830965451480a9623b79fbd5ee",
-"/": "6b7b43830965451480a9623b79fbd5ee",
-"main.dart.js": "7373389395b90594b3a1d2ce2f5207b9",
+"index.html": "3a20f316c892e4886e26225aed1fcb81",
+"/": "3a20f316c892e4886e26225aed1fcb81",
+"main.dart.js": "25bf25a5201b076c945c3e973a8d93a2",
 "manifest.json": "5dbaea48922ffe61c3abf6843474db1c",
 "version.json": "cf161938966a973e5d4ed5c18749ba07"
 };

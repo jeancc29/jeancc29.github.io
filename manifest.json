@@ -1,6 +1,6 @@
 {
-    "name": "prestamo",
-    "short_name": "prestamo",
+    "name": "loterias",
+    "short_name": "loterias",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

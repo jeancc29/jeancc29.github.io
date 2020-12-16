@@ -71273,7 +71273,7 @@ o=H.V(p).i("af<1>")
 n.u(0,P.X(new H.af(p,new N.agt(),o),!0,o.i("p.E")))
 return P.K(null,r)}})
 return P.L($async$uo,r)},
-D:function(a,b){var s=this,r=s.aE,q=K.j2("en proceso...","AMORTIZACION",s.gYQ(),s.ga4W(),"Agregue todos los prestamos con sus respectivas garantias, garantes y cobradores.","Prestamo"),p=s.Q
+D:function(a,b){var s=this,r=s.aE,q=K.j2("Guardar","AMORTIZACION",s.gYQ(),s.ga4W(),"Agregue todos los prestamos con sus respectivas garantias, garantes y cobradores.","Prestamo"),p=s.Q
 p.toString
 return S.De(!1,H.c([q,T.c7(B.d4(new N.agy(s),p,t.Sp),1)],t.t),!1,r,!1,b,!1,null,!0)}}
 N.aeH.prototype={

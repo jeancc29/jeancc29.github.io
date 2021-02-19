@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "bdee962a26eda6f1daa522e1c433b6a1",
+  "assets/AssetManifest.json": "9e3fa7ddf95467f497db253986d4f384",
 "assets/FontManifest.json": "d8d2d0ef8251dc82cc4fd8e499b2680b",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/fonts/OpenSans-Bold.ttf": "1025a6e0fb0fa86f17f57cc82a6b9756",
@@ -40,6 +40,8 @@ const RESOURCES = {
 "assets/fonts/Roboto-Thin.ttf": "321de678e592d0b8f44f1a82d7ca4b62",
 "assets/fonts/Roboto-ThinItalic.ttf": "35a9c89aff1396595ad345e378a32aca",
 "assets/images/creditcard.png": "6d35cdbf8911f657c6d913803933d018",
+"assets/images/facebook-blue.svg": "5b4d1de7f598ab3ef1627923f1a4084c",
+"assets/images/google-color.svg": "a06736a988863aad08707477edd7f54b",
 "assets/images/loan.png": "8fc14a06f5467777264b657d7c1ad4bc",
 "assets/images/login.png": "44bdb33474133bfd7e9cb674bbcd7bec",
 "assets/images/logo.png": "fc139cdbe6deb1b8ca2a16641043e3e9",
@@ -64,7 +66,7 @@ const RESOURCES = {
 "assets/images/profile2.jpg": "3bc281e1079b3341055cc6241a10c750",
 "assets/images/Untitled.png": "dbea34f99363f2ce99abc98e73004639",
 "assets/images/user.png": "1300018473cc0038187aaa0e2604fa27",
-"assets/NOTICES": "a6b3f1ad599876cd67bd5e5209e2f752",
+"assets/NOTICES": "a76eb8c2c35db084f1f282bb8ce6a9c3",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "a126c025bab9a1b4d8ac5534af76a208",
@@ -72,9 +74,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "57ec0a2926d7744544dbde5b44743b6b",
-"/": "57ec0a2926d7744544dbde5b44743b6b",
-"main.dart.js": "c28db9ca0e2a8c98dd40bb0220181592",
+"index.html": "483fb4df43c71e38c4da8d4fd5b0fc1c",
+"/": "483fb4df43c71e38c4da8d4fd5b0fc1c",
+"main.dart.js": "6a2c5a63a005aa924eb19824498a029d",
 "manifest.json": "5dbaea48922ffe61c3abf6843474db1c",
 "sql-wasm.js": "04b960431ad6c0314a115558cff07880",
 "sql-wasm.wasm": "ea7edc8cc0702b48cc93bf41e5b6cc61",
@@ -222,7 +224,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }

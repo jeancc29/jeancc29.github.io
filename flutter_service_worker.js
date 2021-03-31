@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "9e3fa7ddf95467f497db253986d4f384",
+  "assets/AssetManifest.json": "d0feb7566ba925daaac655a5f7b95db3",
 "assets/FontManifest.json": "d8d2d0ef8251dc82cc4fd8e499b2680b",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/fonts/OpenSans-Bold.ttf": "1025a6e0fb0fa86f17f57cc82a6b9756",
@@ -42,6 +42,7 @@ const RESOURCES = {
 "assets/images/creditcard.png": "6d35cdbf8911f657c6d913803933d018",
 "assets/images/facebook-blue.svg": "5b4d1de7f598ab3ef1627923f1a4084c",
 "assets/images/google-color.svg": "a06736a988863aad08707477edd7f54b",
+"assets/images/laptop-with-blank-screen-isolated-transparent-background_150973-4.jpg": "769c89659ad76e26da7d1035278d0f0d",
 "assets/images/loan.png": "8fc14a06f5467777264b657d7c1ad4bc",
 "assets/images/login.png": "44bdb33474133bfd7e9cb674bbcd7bec",
 "assets/images/logo.png": "fc139cdbe6deb1b8ca2a16641043e3e9",
@@ -66,7 +67,7 @@ const RESOURCES = {
 "assets/images/profile2.jpg": "3bc281e1079b3341055cc6241a10c750",
 "assets/images/Untitled.png": "dbea34f99363f2ce99abc98e73004639",
 "assets/images/user.png": "1300018473cc0038187aaa0e2604fa27",
-"assets/NOTICES": "a475c95f6f0322d45291d4314023ec59",
+"assets/NOTICES": "4afd299a72d2463a5e7e54dc7fde06de",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "a126c025bab9a1b4d8ac5534af76a208",
@@ -74,9 +75,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "33d0507b17e2543c54f11ecabd5963c1",
-"/": "33d0507b17e2543c54f11ecabd5963c1",
-"main.dart.js": "cc8a222af713f24ba800bf2a7f362297",
+"index.html": "1888b30429c230df730158bf3243a20b",
+"/": "1888b30429c230df730158bf3243a20b",
+"main.dart.js": "79b813dcd8dabb5d7568d50dcc894888",
 "manifest.json": "5dbaea48922ffe61c3abf6843474db1c",
 "sql-wasm.js": "04b960431ad6c0314a115558cff07880",
 "sql-wasm.wasm": "ea7edc8cc0702b48cc93bf41e5b6cc61",

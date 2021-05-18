@@ -49,11 +49,15 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3454141173');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=277680983');
       });
     }
   </script>
   <script defer src="sql-wasm.js"></script>
-  <script src="main.dart.js?1.0.82" type="application/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+  <script type="text/javascript">
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
+  </script>
+  <script src="main.dart.js?1.0.83" type="application/javascript"></script>
 </body>
 </html>

@@ -110,16 +110,8 @@
       height: 160px;
     }
 
-    @media (max-width:500px){
-      .content {
-        width: 35%;
-        left: 35%;
-      }
-
-      .loading-box{
-        height: 2px;
-        border: 1px solid #ededed;
-      }
+    #imgLoterias{
+      top: 0%; left: 45%; display: flex; position: absolute; border-radius: 15px;
     }
 
 
@@ -169,6 +161,18 @@
 
 
 
+@media (max-width:500px){
+      .content {
+        width: 35%;
+        left: 35%;
+      }
+
+      .loading-box{
+        height: 1px;
+        border: none;
+      }
+    }
+
 
 
 
@@ -182,7 +186,7 @@
   </div> -->
 
 <div class="content">
-  <img width="60px" height="60px" style="top: 0%; left: 45%; display: flex; position: absolute; border-radius: 15px;"  src="/assets/assets/images/loterias_dominicanas_sin_letras_editada.png" alt="">
+  <img width="60px" height="60px" id="imgLoterias"  src="/assets/assets/images/loterias_dominicanas_sin_letras_editada.png" alt="">
   <div class="loading-box">
     <div class="loader"></div>
   </div>
@@ -238,6 +242,6 @@
   </script>
   <script defer src="sql-wasm.js"></script>
 
-  <script src="main.dart.js?2.1.48" type="application/javascript"></script>
+  <script src="main.dart.js?2.1.49" type="application/javascript"></script>
 </body>
 </html>

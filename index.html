@@ -107,7 +107,7 @@
       position: absolute;
       top: 40%;
       left: 40%;
-    width: 400px;
+    width: 300px;
     height: 10px;
     border-radius: 50px;
     border: 2px solid #ededed;
@@ -120,13 +120,14 @@
     height: 100%;
     position: absolute;
     border-radius: 50px;
-    background: linear-gradient(45deg, #b6b5ff, #f378b0);
+    /* background: linear-gradient(45deg, #b6b5ff, #df1f75); */
+    background: #df1f75;
     left: 0%;
 }
 
 .loader{
     left: -100%;
-    animation: load 3s linear infinite;
+    animation: load 2s linear infinite;
 }
 
 @keyframes load{
@@ -209,6 +210,6 @@
   </script>
   <script defer src="sql-wasm.js"></script>
 
-  <script src="main.dart.js?2.1.24" type="application/javascript"></script>
+  <script src="main.dart.js?2.1.25" type="application/javascript"></script>
 </body>
 </html>

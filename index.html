@@ -29,6 +29,8 @@
   <title>lote_app_flutter</title>
   <link rel="manifest" href="manifest.json">
   <style>
+
+
     /* .loading {
       display: flex;
       justify-content: center;
@@ -87,6 +89,11 @@
     } */
 
 
+    div.image::before {
+      content:url('assets/assets/images/loterias_dominicanas_sin_letras_editada.png');
+    }
+
+
     .loading-box{
     /* position: relative; */
     display: flex;
@@ -126,6 +133,13 @@
         left: 100%;
     }
 }
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -134,8 +148,11 @@
     <div class="loader"></div>
   </div> -->
 
+<div class="content">
+  <div class="image"></div>
   <div class="loading-box">
     <div class="loader"></div>
+  </div>
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
@@ -188,6 +205,6 @@
   </script>
   <script defer src="sql-wasm.js"></script>
 
-  <script src="main.dart.js?2.1.9" type="application/javascript"></script>
+  <script src="main.dart.js?2.1.10" type="application/javascript"></script>
 </body>
 </html>

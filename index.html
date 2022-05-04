@@ -28,8 +28,6 @@
 
   <title>lote_app_flutter</title>
   <link rel="manifest" href="manifest.json">
-  <script src="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.js"></script>
-  <link rel="preload" href="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.wasm" as="fetch" crossOrigin="anonymous">
 
   <style>
     div.image {
@@ -182,12 +180,12 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=413179016');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1258351903');
       });
     }
   </script>
   <script defer src="sql-wasm.js"></script>
 
-  <script src="main.dart.js?2.5.3" type="application/javascript"></script>
+  <script src="main.dart.js?2.5.5" type="application/javascript"></script>
 </body>
 </html>

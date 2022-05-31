@@ -18,6 +18,39 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+
+  <div id="loading">
+    <style>
+      body {
+        inset: 0; overflow: hidden;
+        margin: 0; padding: 0;
+        position: fixed;
+      }
+      #loading {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+      }
+      #loading img {
+        animation: 1s ease-in-out 0s infinite alternate breathe;
+        opacity: .66;
+        transition: opacity .4s;
+      }
+      #loading.main_done img {
+        opacity: 1;
+      }
+      #loading.init_done img {
+        animation: .33s ease-in-out 0s 1 forwards zooooom;
+        opacity: .05;
+      }
+      @keyframes breathe { from { transform: scale(1) } to { transform: scale(0.95)}}
+      @keyframes zooooom { from { transform: scale(1) } to { transform: scale(10)}}
+      </style>
+    <!-- <img src="icons/Icon-192.png" alt="Loading indicator..." /> -->
+    <img width="35px" height="35px" src="assets/images/wallet.png" alt="Loading indicator..." />
+  </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -49,15 +82,35 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3317045713');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2961053092');
       });
     }
+    window.addEventListener('load', function() {
+      var loading = document.querySelector('#loading');
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        loading.classList.add('main_done');
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        loading.classList.add('init_done');
+        return appRunner.runApp();
+      }).then(function(app) {
+        // Wait a few milliseconds so users can see the "zoooom" animation
+        // before getting rid of the "loading" div.
+        window.setTimeout(function() {
+          loading.remove();
+        }, 200);
+      });
+    });
   </script>
   <script defer src="sql-wasm.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
   <script type="text/javascript">
       pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
   </script>
-  <script src="main.dart.js?3.0.0" type="application/javascript"></script>
+  <script src="main.dart.js?3.0.2" type="application/javascript"></script>
 </body>
 </html>

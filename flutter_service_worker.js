@@ -339,15 +339,17 @@ const RESOURCES = {
 "icons/apple-touch-icon.png": "650ca45742f36a159882f443ea65481e",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
+"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
+"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "ic_launcher.png": "3092c2d9273916fa03590776674f9a05",
-"index.html": "65c889b9289fec592c9cfef5cf2366e3",
-"/": "65c889b9289fec592c9cfef5cf2366e3",
+"index.html": "41e761f5d6811dce81bbc28ef4f9e41b",
+"/": "41e761f5d6811dce81bbc28ef4f9e41b",
 "logo.png": "26f05f1e0855712633f940855df0ada2",
 "main.dart.js": "5f922b363029a7fa88faf02190feea60",
 "manifest.json": "8af90b158eeb4f9c84088ae4e24e2bb9",
 "sql-wasm.js": "04b960431ad6c0314a115558cff07880",
 "sql-wasm.wasm": "ea7edc8cc0702b48cc93bf41e5b6cc61",
-"version.json": "f38dfc8c744bc21863b9b6b826cc9486"
+"version.json": "bd61bd8914145f90fa2fe38168a319f1"
 };
 
 // The application shell files that are downloaded before a service worker can

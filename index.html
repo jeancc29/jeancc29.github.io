@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -8,14 +20,111 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="prestamo">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="lote_app_flutter">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
 
-  <title>prestamo</title>
+  <title>lote_app_flutter</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    div.image {
+      width: 30%;
+      height: 30%;
+      border-radius: 20%;
+      /* content:url('assets/assets/images/loterias_dominicanas_sin_letras_editada.png'); */
+      background-image:url('assets/assets/images/loterias_dominicanas_sin_letras_editada.png');
+    }
+
+    .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      /* width: 200px; */
+      width: 14%;
+      height: 160px;
+    }
+
+    #imgLoterias{
+      top: 0%; left: 35%; display: flex; position: absolute; border-radius: 15px;
+    }
+
+
+    .loading-box{
+    /* position: relative; */
+    /* display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 45%;
+      left: 45%; */
+      
+      position: relative;
+    bottom: 0%;
+    width: 100%;
+    height: 6px;
+    border-radius: 50px;
+    border: 2px solid #ededed;
+    overflow: hidden;
+}
+
+
+.loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50px;
+    /* background: linear-gradient(45deg, #b6b5ff, #df1f75); */
+    background: linear-gradient(45deg, #b6b5ff, #df1f75);
+    left: 0%;
+}
+
+.loader{
+    left: -100%;
+    animation: load 2s linear infinite;
+}
+
+@keyframes load{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+
+@media (max-width:750px){
+      .content {
+        width: 30%;
+        left: 35%;
+      }
+
+      .loading-box{
+        height: 3px;
+        border: 1px solid #ededed;
+      }
+
+      #imgLoterias{
+        left: 35%;
+      }
+    }
+
+
+    @media (max-width:520px){
+      #imgLoterias{
+        left: 30%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -49,40 +158,23 @@
       @keyframes zooooom { from { transform: scale(1) } to { transform: scale(10)}}
       </style>
     <!-- <img src="icons/Icon-192.png" alt="Loading indicator..." /> -->
-    <img width="35px" height="35px" src="assets/images/wallet.png" alt="Loading indicator..." />
+    <img width="45px" height="45px" src="assets/assets/images/loterias_dominicanas_sin_letras_mismo_ancho_largo_redondeada.png" alt="Loading indicator..." />
   </div>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-       <!-- The core Firebase JS SDK is always required and must be listed first -->
-<!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script> -->
-<!-- <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script> -->
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script> -->
+  <!-- <div class="content">
+    <img width="50px" height="50px" id="imgLoterias"  src="/assets/assets/images/loterias_dominicanas_sin_letras_editada.png" alt="">
+    <!-- <h2>LoteriaApp</h2> -->
+    <!-- <div class="loading-box">
+      <div class="loader"></div>
+    </div> -->
+  </div> -->
 
-<!-- <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAzMCRTGJLoGFOfvRaihQV7sogeklEHO0Q",
-    authDomain: "prestamo-7e1c2.firebaseapp.com",
-    databaseURL: "https://prestamo-7e1c2.firebaseio.com",
-    projectId: "prestamo-7e1c2",
-    storageBucket: "prestamo-7e1c2.appspot.com",
-    messagingSenderId: "948181054501",
-    appId: "1:948181054501:web:99aebb3737b0c05dd07bcc",
-    measurementId: "G-QJLF8E7KF6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script> -->
-
-  <script>
-    if ('serviceWorker' in navigator) {
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-messaging.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=2961053092');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=463771924');
       });
     }
     window.addEventListener('load', function() {
@@ -105,12 +197,55 @@
         }, 200);
       });
     });
+</script>
+  <script>
+    // importScripts('https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js');
+    // importScripts('https://www.gstatic.com/firebasejs/8.6.1/firebase-messaging.js');
+      const firebaseConfig = {
+      // apiKey: "your key-EW_U6NZU-A",
+      // authDomain: "flutter-notification-tes-fec9d.dasda.com",
+      // projectId: "flutter-notification-tes-fec9d",
+      // storageBucket: "flutter-dasdadas-tes-fec9d.appspot.com",
+      // messagingSenderId: "dasdsa",
+      // appId: "1:263307381024:web:dsadads",
+      // measurementId: "G-dsadsa"
+      apiKey: "AIzaSyBx-v-9Yj1wCxKTCzmO3HLypqFTPIvWbP4",
+      authDomain: "loterias-c5cca.firebaseapp.com",
+      projectId: "loterias-c5cca",
+      storageBucket: "loterias-c5cca.appspot.com",
+      messagingSenderId: "553232454336",
+      appId: "1:553232454336:web:f0fe67fdc96857baaa5325",
+      measurementId: "G-YJJQB6C3Q5"
+    };
+      firebase.initializeApp(firebaseConfig);
+      const messaging = firebase.messaging();
+
+      /*messaging.onMessage((payload) => {
+      console.log('Message received. ', payload);*/
+      messaging.onBackgroundMessage(function(payload) {
+        console.log('Received background message ', payload);
+
+        const notificationTitle = payload.notification.title;
+        const notificationOptions = {
+          body: payload.notification.body,
+        };
+
+        self.registration.showNotification(notificationTitle,
+          notificationOptions);
+      });
+  </script>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
   </script>
   <script defer src="sql-wasm.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
-  <script type="text/javascript">
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
-  </script>
-  <script src="main.dart.js?3.0.2" type="application/javascript"></script>
+
+  <script src="main.dart.js?15.0.5" type="application/javascript"></script>
 </body>
 </html>

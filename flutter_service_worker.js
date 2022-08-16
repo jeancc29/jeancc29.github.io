@@ -72,7 +72,7 @@ const RESOURCES = {
 "assets/images/wallet_3.png": "ca0e983b463780c6710fec9479b9c7f2",
 "assets/images/wallet_4.png": "886c960550bef37453707fe2c26d9db7",
 "assets/images/wallet_5.png": "ea36b9c413476fce024181f926322b80",
-"assets/NOTICES": "a9e1c55e3c180e8942014247a7151846",
+"assets/NOTICES": "956afb7fd396fe92f9f2be8da5b5f33f",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "00bb2b684be61e89d1bc7d75dee30b58",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "4b6a9b7c20913279a3ad3dd9c96e155b",
@@ -88,14 +88,14 @@ const RESOURCES = {
 "icons/apple-touch-icon.png": "5daf508785fd6fa68761fafa47842047",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "5fa10490ae2b41eaa89d96cccc5a2f2f",
-"/": "5fa10490ae2b41eaa89d96cccc5a2f2f",
+"index.html": "cf0e38ad4d1f0c8e08b4bc2d580ccdf4",
+"/": "cf0e38ad4d1f0c8e08b4bc2d580ccdf4",
 "logo.png": "e0fbed6d36f6264488f93f57c85ef4fc",
-"main.dart.js": "ec081a342c35d8727e704fc2b9714fa3",
+"main.dart.js": "faf967a992969ede6ee161c91ef56f4e",
 "manifest.json": "f8f3c1c226f3b4b0d7db86b076bfdd7a",
 "sql-wasm.js": "04b960431ad6c0314a115558cff07880",
 "sql-wasm.wasm": "ea7edc8cc0702b48cc93bf41e5b6cc61",
-"version.json": "54738893742ee4dedc90c41e484718bb"
+"version.json": "8a643250771f9bd31c2855f9be12b4bc"
 };
 
 // The application shell files that are downloaded before a service worker can

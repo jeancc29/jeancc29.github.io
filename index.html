@@ -16,9 +16,21 @@
 
   <title>prestamo</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    /*for firefox*/
+    #map-input-search::-moz-selection {
+        background:blue;
+        color: white;
+    }
+    /*for everything else*/
+    #map-input-search::selection {
+        background:blue;
+        color: white;
+    }
+  </style>
 </head>
 <body>
-
+<!--<div id="map"></div>-->
   <div id="loading">
     <style>
       body {
@@ -79,10 +91,12 @@
   firebase.analytics();
 </script> -->
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyc2-746EsDObfJ8GRCMb5JsVrvXaWkFw&libraries=places,geometry,localContext"></script>
+<!--<script src="http://maps.googleapis.com/maps/api/js?libraries=LIBRARY1,LIBRARY2"></script>-->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=2958048988');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1013052612');
       });
     }
     window.addEventListener('load', function() {
@@ -111,6 +125,6 @@
   <script type="text/javascript">
       pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
   </script>
-  <script src="main.dart.js?31.0.0+1" type="application/javascript"></script>
+  <script src="main.dart.js?31.0.3+1" type="application/javascript"></script>
 </body>
 </html>
